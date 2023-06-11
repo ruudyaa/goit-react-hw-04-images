@@ -27,15 +27,16 @@ export default function Modal({ largeImageURL, tags, onClose }) {
       onClose();
     }
   };
-
-  return createPortal(
-    <ModalBackdrop onClick={handleBackdropClick}>
-      <ModalContent>
-        <img src={largeImageURL} alt={tags} />
-      </ModalContent>
-    </ModalBackdrop>,
-    modalRoot
-  );
+  document.addEventListener('DOMContentLoaded', () => {
+    return createPortal(
+      <ModalBackdrop onClick={handleBackdropClick}>
+        <ModalContent>
+          <img src={largeImageURL} alt={tags} />
+        </ModalContent>
+      </ModalBackdrop>,
+      modalRoot
+    );
+  });
 }
 
 Modal.propTypes = {
