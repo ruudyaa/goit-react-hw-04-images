@@ -13,12 +13,8 @@ export const getImages = async (query, page) => {
     page: page,
     per_page: 12,
   });
-  try {
-    const response = await axios.get(`?${OPTIONS.toString()}`);
-    return response.data;
-  } catch (error) {
-    console.error(error.toJSON());
-  }
+  const response = await axios.get(`?${OPTIONS.toString()}`);
+  return response.data;
 };
 
 export const normalizedImages = imagesArray =>
