@@ -27,7 +27,6 @@ export default function Modal({ largeImageURL, tags, onClose }) {
       onClose();
     }
   };
-  // document.addEventListener('DOMContentLoaded', () => {
   return createPortal(
     <ModalBackdrop onClick={handleBackdropClick}>
       <ModalContent>
@@ -36,7 +35,6 @@ export default function Modal({ largeImageURL, tags, onClose }) {
     </ModalBackdrop>,
     modalRoot
   );
-  // });
 };
 
 Modal.propTypes = {
