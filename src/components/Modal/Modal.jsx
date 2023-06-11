@@ -37,7 +37,7 @@ export default function Modal({ largeImageURL, tags, onClose }) {
       modalRoot
     );
   });
-}
+};
 
 Modal.propTypes = {
   children: PropTypes.node,
