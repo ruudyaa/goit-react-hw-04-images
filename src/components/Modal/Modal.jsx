@@ -1,12 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
-import {
-  ModalBackdrop,
-  ModalContent,
-  ModalPicture,
-  ModalDescr,
-} from './Modal.styled';
+import { ModalBackdrop, ModalContent } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
@@ -36,9 +31,7 @@ export default function Modal({ largeImageURL, tags, onClose }) {
     return createPortal(
       <ModalBackdrop onClick={handleBackdropClick}>
         <ModalContent>
-          {/* <img src={largeImageURL} alt={tags} /> */}
-          <ModalPicture src={largeImageURL} alt={tags} />
-          <ModalDescr>{tags}</ModalDescr>
+          <img src={largeImageURL} alt={tags} />
         </ModalContent>
       </ModalBackdrop>,
       modalRoot
